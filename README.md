@@ -9,6 +9,10 @@ function performance testing.
 
 ![Web Page](img/web.jpg)
 
+This system is also equipped with DMA that can directly export raw data. This module can directly export the raw data stream of the PC to PYNQ. And perform operations such as drawing in PYNQ. ``Example`` folder provide some example notebooks.
+
+![Figure_out](img/figure.png)
+
 
 # STSTEM REQUIREMENTS
 
