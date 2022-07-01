@@ -74,3 +74,7 @@ npm run build
 source onboard.tcl
 ```
 ![Block Design](img/block_design.png)
+
+# PC Data collection
+
+For additional PC information, a jupyter notebook is provided to collect the PC stream from DMA. ``notebook`` folder provide the example juoyter notebook for reading the PC.
