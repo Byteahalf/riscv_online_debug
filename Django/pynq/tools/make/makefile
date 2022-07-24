@@ -3,7 +3,7 @@ MARCH ?= rv32imc
 ABI ?= ilp32
 STKPTR ?= 0x8000
 
-prefix = riscv-none-elf-
+prefix = riscv-none-embed-
 
 text_prefix = \033[0;32m
 text_suffix = \033[0m
@@ -14,7 +14,7 @@ all: $(TARGET).bin load
 	@echo "${text_prefix}Combining object files $< to produce $@ ${text_suffix}"
 	${prefix}gcc -O -ffreestanding -nostdlib -o $@ \
 		-Wl,-Bstatic,-T,picorv32.ld -DSTKPTR=$(STKPTR)\
-		$^ -lgcc -march=rv32im -L/opt/xpack-riscv-none-embed-gcc-10.2.0-1.2/riscv-none-embed/lib -l:libc_nano.a
+		$^ -lgcc -march=rv32im
 
 %.o: %.c 
 	@echo "${text_prefix}Building object file $@ for $< ${text_suffix} "
